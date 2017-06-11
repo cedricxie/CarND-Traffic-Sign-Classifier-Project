@@ -66,7 +66,6 @@ Here is an example of a traffic sign image before and after grayscaling.
 
 Second, I normalized the image data because it could help the data to become well conditioned before the training and therefore improves its prediction accuracy.
 
-
 #### 2. Describe what your final model architecture looks like.
 
 My final model consisted of the following layers:
@@ -106,7 +105,7 @@ My final model results were:
 * test set accuracy of 0.911
 
 I chose LeNat-5 DNN model as the architecture.
-* Reason： It works out prett well on the task of image recognition for MNIST data set, therefore it should be applicable to traffic sign recognition as well.
+* Reason： It works out pretty well on the task of image recognition for MNIST data set, therefore it should be applicable to traffic sign recognition as well.
 * Results: The accuracy it achived on the training, validation and test sets are all > 0.91 and are its performance is pretty consistence. 
 * Improvement: I tried tweaking several conditions in the model, as well as modifying the architecture by adding two dropouts. The performance for each case are shown here for comparison. The motivation for adding dropouts is because the accuracy reaches the plateau after about 10 epochs and the model seems to encounter overfitting (too good accuracy on the training set while insufficient accuracy on the validation set). Therefore dropouts are added in the LeNat-5 architecture and it indeed improves the accuracy on the validation set.
 
@@ -136,7 +135,7 @@ Here are five German traffic signs that I found on the [web](http://electronicim
 ![New Sign: Children Crossing][image10] ![New Sign: Speed Limit (20km/h)][image11] ![New Sign: No Entry][image12] 
 ![New Sign: Stop][image13] ![New Sign: Turn Right Ahead][image14]
 
-The first one could be difficult to claasify due to the complex shape in the sign.
+The first one could be difficult to classify due to the complex shape in the sign.
 
 #### 2. Discuss the model's predictions on these new traffic signs and compare the results to predicting on the test set.
 
@@ -166,7 +165,7 @@ For the first image of "Child crossing", the model is having a hard time predict
 | .05				    | Slippery Road      							|
 
 
-For the second image of "Speed limit (20km/h)":
+For the second image of "Speed limit (20km/h)", it is wrongly predicted as "Dangerous curve to the right".
 
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
@@ -196,7 +195,7 @@ For the fourth image of "Stop":
 | .01	      			| Bumpy road	       		 					|
 | .01				    | Bicycles crossing								|
 
-For the fifth image of "Turn right ahead":
+For the fifth image of "Turn right ahead", it is predicted to be "Right-of-way at the next intersection" by mistake.
 
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
