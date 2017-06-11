@@ -12,14 +12,20 @@ The goals / steps of this project are the following:
 [//]: # (Image References)
 
 [image1]: accuracy_baseline.png "Baseline"
-[image2]: accuracy_gray_scaled "Gray Scaled"
+[image2]: accuracy_gray_scaled.png "Gray Scaled"
 [image3]: accuracy_normalized.png "Normalized"
 [image4]: accuracy_normalized_and_gray_scaled.png "Normalized and Gray Scaled"
 [image5]: accuracy_normalized_and_gray_scaled_epoch_50.png "Normalized and Gray Scaled with 50 Epoch"
 [image6]: accuracy_normalized_and_gray_scaled_and_drop_out.png "Normalized and Gray Scaled with Dropout"
-[image7]:data_information.png "Data Information"
-[image8]:sign_before_gray_scale "Sign Before Gray Scaling"
-[image9]:sign_after_gray_scale "Sign After Gray Scaling"
+[image7]: data_information.png "Data Information"
+[image8]: sign_before_gray_scale.png "Sign Before Gray Scaling"
+[image9]: sign_after_gray_scale.png "Sign After Gray Scaling"
+[image10]: new_image_1.jpg "New Sign: Children Crossing"
+[image11]: new_image_2.jpg "New Sign: Speed Limit (20km/h)"
+[image12]: new_image_3.jpg "New Sign: No Entry"
+[image13]: new_image_4.jpg "New Sign: Stop"
+[image14]: new_image_5.jpg "New Sign: Turn Right Ahead"
+[image15]: new_image_2_top_wrong_answer.jpg "Wrong Answer: Dangerous curve to the right"
 
 ## Contents
 
@@ -118,53 +124,56 @@ I chose LeNat-5 DNN model as the architecture.
 | Normalized								| 0.990   	    			    | 0.907							 |
 | Gray Scaled and Normalized	      		| 0.991   	    			    | 0.912 						 |
 | Gray Scaled and Normalized with 50 EPOCH  | 0.997   	    			    | 0.906							 |
-| Gray Scaled and Normalized with Dropout	| 0.961   	    			    | 0.942 						 |
+| Gray Scaled and Normalized with Dropout	| **0.961**      			    | **0.942** 					 |
 
 
 ### Test a Model on New Images
 
-####1. Choose five German traffic signs found on the web and provide them in the report. For each image, discuss what quality or qualities might be difficult to classify.
+#### 1. Choose five German traffic signs found on the web and provide them in the report. For each image, discuss what quality or qualities might be difficult to classify.
 
-Here are five German traffic signs that I found on the web:
+Here are five German traffic signs that I found on the [web](http://electronicimaging.spiedigitallibrary.org/data/journals/electim/927109/jei_22_4_041105_f010.png):
 
-![alt text][image4] ![alt text][image5] ![alt text][image6] 
-![alt text][image7] ![alt text][image8]
+![New Sign: Children Crossing][image10] ![New Sign: Speed Limit (20km/h)][image11] ![New Sign: No Entry][image12] 
+![New Sign: Stop][image13] ![New Sign: Turn Right Ahead][image14]
 
-The first image might be difficult to classify because ...
+The first one could be difficult to claasify due to the complex shape in the sign.
 
-####2. Discuss the model's predictions on these new traffic signs and compare the results to predicting on the test set. At a minimum, discuss what the predictions were, the accuracy on these new predictions, and compare the accuracy to the accuracy on the test set (OPTIONAL: Discuss the results in more detail as described in the "Stand Out Suggestions" part of the rubric).
+#### 2. Discuss the model's predictions on these new traffic signs and compare the results to predicting on the test set.
 
 Here are the results of the prediction:
 
 | Image			        |     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
-| Stop Sign      		| Stop sign   									| 
-| U-turn     			| U-turn 										|
-| Yield					| Yield											|
-| 100 km/h	      		| Bumpy Road					 				|
-| Slippery Road			| Slippery Road      							|
+| Children crossing     | Beware of ice/snow   							| 
+| Speed limit (20km/h)  | Dangerous curve to the right   				|
+| No entry				| No entry										|
+| Stop	      			| Stop      					 				|
+| Turn right ahead		| Right-of-way at the next intersection    		|
 
 
-The model was able to correctly guess 4 of the 5 traffic signs, which gives an accuracy of 80%. This compares favorably to the accuracy on the test set of ...
+The model was able to correctly guess 2 of the 5 traffic signs, which gives an accuracy of 40%. This result is worse than the accuracy on the test set of 91% accuracy.
 
-####3. Describe how certain the model is when predicting on each of the five new images by looking at the softmax probabilities for each prediction. Provide the top 5 softmax probabilities for each image along with the sign type of each probability. (OPTIONAL: as described in the "Stand Out Suggestions" part of the rubric, visualizations can also be provided such as bar charts)
+#### 3. Describe how certain the model is when predicting on each of the five new images by looking at the softmax probabilities for each prediction. Provide the top 5 softmax probabilities for each image along with the sign type of each probability. 
 
-The code for making predictions on my final model is located in the 11th cell of the Ipython notebook.
-
-For the first image, the model is relatively sure that this is a stop sign (probability of 0.6), and the image does contain a stop sign. The top five soft max probabilities were
+For the first image of "Child crossing", the model is having a hard time predicting what it is. The top five soft max probabilities were
 
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
-| .60         			| Stop sign   									| 
-| .20     				| U-turn 										|
-| .05					| Yield											|
-| .04	      			| Bumpy Road					 				|
-| .01				    | Slippery Road      							|
+| .39         			| Beware of ice/snow   							| 
+| .20     				| Dangerous curve to the right					|
+| .20					| General caution								|
+| .10	      			| Turn left ahead        		 				|
+| .05				    | Slippery Road      							|
 
 
-For the second image ... 
+For the second image of "Speed limit (20km/h)":
 
-### (Optional) Visualizing the Neural Network (See Step 4 of the Ipython notebook for more details)
-####1. Discuss the visual output of your trained network's feature maps. What characteristics did the neural network use to make classifications?
+| Probability         	|     Prediction	        					| 
+|:---------------------:|:---------------------------------------------:| 
+| .97         			| Dangerous curve to the right  ![Wrong Answer: Dangerous curve to the right][image15] 	| 
+| .01     				| Dangerous curve to the right					|
+| .01					| General caution								|
+| .01	      			| Turn left ahead        		 				|
+| .00				    | Slippery Road      							|
 
 
