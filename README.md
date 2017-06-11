@@ -159,7 +159,7 @@ For the first image of "Child crossing", the model is having a hard time predict
 
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
-| .39         			| [Beware of ice/snow] (https://en.wikipedia.org/wiki/Road_signs_in_Germany#/media/File:Zusatzzeichen_1007-30.svg) | 
+| .39         			| Beware of ice/snow							| 
 | .20     				| Dangerous curve to the right					|
 | .20					| General caution								|
 | .10	      			| Turn left ahead        		 				|
@@ -170,7 +170,7 @@ For the second image of "Speed limit (20km/h)":
 
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
-| .97         			| [Dangerous curve to the right](https://en.wikipedia.org/wiki/Road_signs_in_Germany#/media/File:Zeichen_103-20_-_Kurve_(rechts),_StVO_1992.svg)  | 
+| .97         			| Dangerous curve to the right  				| 
 | .01     				| Speed limit (120km/h)							|
 | .01					| Keep right									|
 | .01	      			| Ahead only	        		 				|
