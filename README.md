@@ -159,7 +159,7 @@ For the first image of "Child crossing", the model is having a hard time predict
 
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
-| .39         			| Beware of ice/snow   							| 
+| .39         			| [Beware of ice/snow] (https://en.wikipedia.org/wiki/Road_signs_in_Germany#/media/File:Zusatzzeichen_1007-30.svg) | 
 | .20     				| Dangerous curve to the right					|
 | .20					| General caution								|
 | .10	      			| Turn left ahead        		 				|
@@ -170,10 +170,38 @@ For the second image of "Speed limit (20km/h)":
 
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
-| .97         			| Dangerous curve to the right  ![Wrong Answer: Dangerous curve to the right][image15] 	| 
-| .01     				| Dangerous curve to the right					|
-| .01					| General caution								|
-| .01	      			| Turn left ahead        		 				|
-| .00				    | Slippery Road      							|
+| .97         			| [Dangerous curve to the right](https://en.wikipedia.org/wiki/Road_signs_in_Germany#/media/File:Zeichen_103-20_-_Kurve_(rechts),_StVO_1992.svg)  | 
+| .01     				| Speed limit (120km/h)							|
+| .01					| Keep right									|
+| .01	      			| Ahead only	        		 				|
+| .00				    | Roundabout mandatory 							|
 
+For the third image of "No Entry":
 
+| Probability         	|     Prediction	        					| 
+|:---------------------:|:---------------------------------------------:| 
+| .99         			| No entry									    | 
+| .00     				| Stop											|
+| .00					| Priority road									|
+| .00	      			| Turn right ahead	       		 				|
+| .00				    | Speed limit (30km/h)							|
+
+For the fourth image of "Stop":
+
+| Probability         	|     Prediction	        					| 
+|:---------------------:|:---------------------------------------------:| 
+| .85         			| Stop										    | 
+| .11     				| Keep right									|
+| .01					| Road work										|
+| .01	      			| Bumpy road	       		 					|
+| .01				    | Bicycles crossing								|
+
+For the fifth image of "Turn right ahead":
+
+| Probability         	|     Prediction	        					| 
+|:---------------------:|:---------------------------------------------:| 
+| .46         			| Right-of-way at the next intersection		    | 
+| .23     				| Turn right ahead								|
+| .11					| Priority road									|
+| .04	      			| Roundabout mandatory	       					|
+| .03				    | Beware of ice/snow							|
